@@ -1,13 +1,5 @@
-cat > README.md <<'EOF'
-# devops-project-glitched
+# devops-pipeline
 
-**Team:** glitched
+Renders Markdown files to HTML.
 
-## Members
-- Muhammad Abdullah (23-NTU-CS-FL-1178)
-- Muhammad Ali (<23-NTU-CS-FL-1182>)
-- Muhammad Ibrahim (<23-NTU-CS-FL-1177>)
-
-## Review turnaround
-Every PR gets reviewed within 1 working day.
-EOF
+Usage: npx devops-build SOURCE.md DEST.html

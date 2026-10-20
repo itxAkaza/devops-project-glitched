@@ -18,13 +18,8 @@ test('every page is real HTML and not raw Markdown', () => {
   }
 });
 
-require('node:test')('every built page is non-empty', () => {
-  const fs = require('node:fs');
-  const path = require('node:path');
-  const assert = require('node:assert');
-  const pages = fs.readdirSync('out').filter((f) => f.endsWith('.html'));
-  assert.ok(pages.length > 0, 'no pages were built');
+test('no page is empty', () => {
   for (const p of pages) {
-    assert.ok(fs.statSync(path.join('out', p)).size > 0, p + ' is empty');
+    assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
