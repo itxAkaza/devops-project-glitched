@@ -4,6 +4,3 @@
 .idea/
 .vscode/
 *.swp
-node_modules/
-out/
-*.tgz
