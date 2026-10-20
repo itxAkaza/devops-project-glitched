@@ -1,8 +1,21 @@
 {
   "name": "@itxakaza/devops-pipeline",
-  "version": "1.1.0",
-  "description": "Renders the course Markdown sources into HTML pages.",
+  "version": "1.1.2",
   "main": "tools/build.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build": "node tools/build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Renders the course Markdown sources into HTML pages.",
+  "dependencies": {
+    "markdown-it": "^15.0.3"
+  },
   "bin": {
     "devops-build": "tools/build.js"
   },
@@ -10,16 +23,6 @@
     "tools/",
     "README.md"
   ],
-  "scripts": {
-    "build": "node tools/build.js",
-    "test": "node --test"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "markdown-it": "^15.0.3"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/itxAkaza/devops-project-glitched.git"
