@@ -10,3 +10,5 @@
 - No direct push to `main`, everything goes through a pull request.
 - Every PR needs 1 approval from a teammate.
 - Review within 1 working day.
+
+- CI: GitHub Actions runs make ci on every pull request and every push to main.
