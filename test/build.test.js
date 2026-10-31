@@ -23,3 +23,7 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
+
+require('node:test')('the services page exists', () => {
+  require('node:assert').ok(require('node:fs').existsSync('out/services.html'));
+});
