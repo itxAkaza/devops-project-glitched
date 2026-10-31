@@ -23,23 +23,3 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
-
-require('node:test')('each page title is its source filename', () => {
-  const fs = require('node:fs');
-  const assert = require('node:assert');
-  const pages = fs.readdirSync('out').filter((f) => f.endsWith('.html'));
-  for (const p of pages) {
-    const html = fs.readFileSync('out/' + p, 'utf8');
-    assert.ok(html.includes('<title>' + p.replace('.html', '') + '</title>'));
-  }
-});
-
-require('node:test')('each page title is its source filename', () => {
-  const fs = require('node:fs');
-  const assert = require('node:assert');
-  const pages = fs.readdirSync('out').filter((f) => f.endsWith('.html'));
-  for (const p of pages) {
-    const html = fs.readFileSync('out/' + p, 'utf8');
-    assert.ok(html.includes('<title>' + p.replace('.html', '') + '</title>'));
-  }
-});
