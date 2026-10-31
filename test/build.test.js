@@ -23,3 +23,5 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
+
+require('node:test')('this always fails', () => require('node:assert').ok(false));
