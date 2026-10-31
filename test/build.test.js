@@ -23,5 +23,3 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
-
-test('this always fails', () => assert.ok(false));
