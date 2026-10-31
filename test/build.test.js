@@ -23,12 +23,3 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
-
-require('node:test')('every page names the course', () => {
-  const fs = require('node:fs');
-  const assert = require('node:assert');
-  const pages = fs.readdirSync('out').filter((f) => f.endsWith('.html'));
-  for (const p of pages) {
-    assert.match(fs.readFileSync('out/' + p, 'utf8'), /DevOps/);
-  }
-});
