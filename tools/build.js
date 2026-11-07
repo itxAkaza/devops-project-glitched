@@ -1,4 +1,3 @@
-const unusedLimit = 100;
 #!/usr/bin/env node
 // tools/build.js — renders one Markdown source into one HTML page.
 // Called by the Makefile:  npm run build -- src/notes.md out/notes.html
@@ -6,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const MarkdownIt = require('markdown-it');
 
+const unusedLimit = 100;
 const md = new MarkdownIt({ html: false, linkify: true, typographer: true });
 
 // The part worth testing: Markdown text in, a complete HTML page out.
