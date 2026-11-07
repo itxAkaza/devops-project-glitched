@@ -23,3 +23,7 @@ test('no page is empty', () => {
     assert.ok(fs.statSync('out/' + p).size > 0, p + ' is empty');
   }
 });
+
+test('the notes page exists', () => {
+  assert.ok(fs.existsSync('out/notes.html'));
+});
